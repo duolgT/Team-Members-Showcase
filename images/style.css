@@ -1,0 +1,112 @@
+  *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: aliceblue;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container h1{
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.container p{
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.container .team-members{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 520px);
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 8%);
+  animation: member-card-enter 450ms ease-out both;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgb(0 0 0 / 14%);
+}
+
+@keyframes member-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .member-card {
+    animation: none;
+    transition: none;
+  }
+}
+
+.member-card img {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.member-info {
+  min-width: 0;
+  text-align: left;
+}
+
+.member-info h2 {
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 18px;
+}
+
+.member-info p {
+  margin: 0;
+  text-align: left;
+}
+
+.member-info .member-role {
+  margin-bottom: 8px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.member-info .member-bio {
+  color: #666;
+  font-size: 14px;
+}
